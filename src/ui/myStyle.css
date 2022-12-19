@@ -1,0 +1,32 @@
+.leftside{
+    position: fixed;
+    background: #61dafb;
+    min-height: 98%;
+    max-height: 98%;
+}
+
+.main-page{
+    max-height: 100vh;
+}
+
+.my-table{
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.rightside{
+    padding-top: 0.5%;
+    min-height: 99.5%;
+    max-height: 99.5%;
+}
+
+.MyNavLink{
+    margin-left: 4%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    margin-right: 4%;
+}
+
+.my-custom-button{
+    transition-duration: .3s !important;
+}

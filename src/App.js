@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
+import MainPage from "./ui/MainPage"
+import Expenses from "./ui/rightside/expenses/Expenses"
+import Permissions from "./ui/rightside/permissions/Permissions"
+import Users from "./ui/rightside/users/Users"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="row min-vh-100">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<MainPage/>}>
+                        <Route index element={<Users/>}/>
+                        <Route path="users" element={<Users/>}/>
+                        <Route path="expenses" element={<Expenses/>}/>
+                        <Route path="permissions" element={<Permissions/>}/>
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
